@@ -25,8 +25,10 @@ export default function CheckoutButton() {
   };
 
   return (
-    <button onClick={handleCheckout} disabled={status === "loading"}>
-      {status === "loading" ? "Processing..." : "Pay Now"}
-    </button>
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <button onClick={handleCheckout} disabled={status === "loading"} style={{ backgroundColor: "green", color: "white", padding: "10px", fontSize: "16px" }}>
+        {status === "loading" ? "Processing..." : "Pay Now"}
+      </button>
+    </div>
   );
 }
